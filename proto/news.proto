@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+import "google/protobuf/timestamp.proto";
+
+package news;
+
+option go_package = "./pb";
+
+message NewsRequest {};
+
+message NewsResponse {
+  repeated News news = 1;
+};
+
+message News {
+  int32 id = 1;
+  string title = 2;
+  string content = 3;
+  google.protobuf.Timestamp created_at = 4;
+  google.protobuf.Timestamp updated_at = 5;
+};
+
+service NewsService {
+  rpc ListNews(NewsRequest) returns (NewsResponse);
+};

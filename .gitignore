@@ -1,0 +1,4 @@
+# config file
+server/config.ini
+.env
+.idea

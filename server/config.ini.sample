@@ -1,0 +1,6 @@
+[db]
+driver   = postgres
+name     = db_name
+user     = user_name
+password = your_password
+port     = 5432
